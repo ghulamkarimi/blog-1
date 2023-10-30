@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Viga&display=swap");
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+
+
+:root {
+  font-family: "Poppins", sans-serif;
+}
+
+.active {
+  color:rgb(230, 249, 67);
+}
