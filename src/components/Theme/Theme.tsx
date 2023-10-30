@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../store"
 import { setIsDarkMode } from "../../reducer/AppSlice"
+import { MdOutlineLightMode } from "react-icons/md"
+import { TbMoonStars } from "react-icons/tb"
 
 
 const Theme = () => {
@@ -11,8 +13,17 @@ const Theme = () => {
     }
 
     return (
-        <div className="h-6 w-12 bg-slate-200 rounded-lg flex " onClick={toggleTheme}  >
-            <span className={`h-6 w-6 rounded-xl duration-500 ${isDarkMode ? "bg-yellow-400  translate-x-1" : "bg-slate-700  translate-x-5"}`}></span>
+        <div>
+        <div className="h-6 w-14 flex rounded-xl items-center duration-500 bg-slate-500 "
+     onClick={toggleTheme}  >
+            <span className={`h-6 w-6  flex ml-1 rounded-full justify-center items-center duration-500 ${
+            isDarkMode ? "-translate-x-0.5" : "translate-x-7"
+          }`}>
+
+                <MdOutlineLightMode className={`text-yellow-500 h-6 w-6  ${isDarkMode ? "hidden " : "flex"}`} />
+                <TbMoonStars className={`text-slate-400 h-6 w-6  ${isDarkMode ? "flex " : "hidden"}`} />
+            </span>
+        </div>
         </div>
     )
 }
